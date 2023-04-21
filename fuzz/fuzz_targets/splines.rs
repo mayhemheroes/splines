@@ -6,7 +6,6 @@ use splines::{Interpolation, Key, Spline};
 // Fuzzing
 
 fn main() {
-
     loop {
         fuzz!(|data: &[u8]| {
             if data.len() < 32 {
