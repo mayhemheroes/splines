@@ -1,0 +1,11 @@
+project: splines
+target: lerp
+
+# image: ghcr.io/nottirb/splines:latest
+
+cmds:
+    - cmd: /lerp
+
+
+testsuite:
+    - file://mayhem/testsuite/lerp
