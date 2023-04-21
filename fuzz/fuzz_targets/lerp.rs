@@ -8,6 +8,10 @@ use splines::Interpolate;
 fn main() {
     loop {
         fuzz!(|data: &[u8]| {
+            if data.len() < 32 {
+                return;
+            }
+
             // Create a seed from the input data
             let mut seed = [0u8; 32];
             let seed_len = std::cmp::min(data.len(), 32);

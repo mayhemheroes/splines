@@ -1,7 +1,7 @@
 project: splines
 target: lerp
 
-image: ghcr.io/nottirb/splines:latest
+# image: ghcr.io/nottirb/splines:latest
 
 cmds:
     - cmd: /lerp

@@ -1,7 +1,7 @@
 project: splines
 target: splines
 
-image: ghcr.io/nottirb/splines:latest
+# image: ghcr.io/nottirb/splines:latest
 
 cmds:
     - cmd: /splines

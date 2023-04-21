@@ -9,6 +9,10 @@ fn main() {
 
     loop {
         fuzz!(|data: &[u8]| {
+            if data.len() < 32 {
+                return;
+            }
+
             // Create a seed from the input data
             let mut seed = [0u8; 32];
             for (dst, src) in seed.iter_mut().zip(data.iter()) {
