@@ -11,6 +11,7 @@ cargo-fuzz = true
 [dependencies]
 honggfuzz = "0.5.55"
 rand = "0.8.5"
+rand_pcg = "0.3.1"
 
 [dependencies.splines]
 path = ".."

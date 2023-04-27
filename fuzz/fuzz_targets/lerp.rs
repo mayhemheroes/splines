@@ -1,6 +1,6 @@
 use honggfuzz::fuzz;
 use rand::{Rng, SeedableRng};
-use rand::rngs::StdRng;
+use rand_pcg::Pcg64;
 use splines::Interpolate;
 
 // Fuzzing
@@ -18,7 +18,7 @@ fn main() {
             seed[..seed_len].copy_from_slice(&data[..seed_len]);
 
             // Instantiate a seeded random number generator
-            let mut rng = StdRng::from_seed(seed);
+            let mut rng = Pcg64::from_seed(seed);
 
             // Generate random values
             let start = rng.gen::<f32>();

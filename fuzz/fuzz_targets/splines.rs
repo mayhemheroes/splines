@@ -1,7 +1,7 @@
 use honggfuzz::fuzz;
 use rand::{Rng, SeedableRng};
-use rand::rngs::StdRng;
 use splines::{Interpolation, Key, Spline};
+use rand_pcg::Pcg64;
 
 // Fuzzing
 
@@ -19,7 +19,7 @@ fn main() {
             }
 
             // Instantiate a seeded random number generator
-            let mut rng = StdRng::from_seed(seed);
+            let mut rng = Pcg64::from_seed(seed);
 
             // Fuzz f64
             let start_step_f64 = Key::new(
