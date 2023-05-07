@@ -1,0 +1,8 @@
+project: splines
+target: splines
+
+cmds:
+    - cmd: /splines
+
+testsuite:
+    - file://mayhem/testsuite/splines

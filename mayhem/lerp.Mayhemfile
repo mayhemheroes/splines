@@ -1,0 +1,8 @@
+project: splines
+target: lerp
+
+cmds:
+    - cmd: /lerp
+
+testsuite:
+    - file://mayhem/testsuite/lerp
