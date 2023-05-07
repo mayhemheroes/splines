@@ -1,0 +1,28 @@
+[package]
+name = "splines-fuzz"
+version = "0.0.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+honggfuzz = "0.5.55"
+rand = "0.8.5"
+rand_pcg = "0.3.1"
+
+[dependencies.splines]
+path = ".."
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "lerp"
+path = "fuzz_targets/lerp.rs"
+
+[[bin]]
+name = "splines"
+path = "fuzz_targets/splines.rs"
