@@ -1,0 +1,33 @@
+[package]
+name = "splines-mayhem-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+rand = "0.8.5"
+rand_pcg = "0.3.1"
+
+[dependencies.splines]
+path = "../.."
+default-features = false
+features = ["std"]
+
+[[bin]]
+name = "splines"
+path = "fuzz_targets/splines.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "lerp"
+path = "fuzz_targets/lerp.rs"
+test = false
+doc = false
+
+[workspace]
+members = ["."]
